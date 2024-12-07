@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-app-rca
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: test-apply 
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./
+    repoURL: https://github.com/jyotsanaarora/podspecification/
+    targetRevision: main
+  syncPolicy: {}
