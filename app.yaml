@@ -12,4 +12,3 @@ spec:
     path: ./
     repoURL: https://github.com/jyotsanaarora/podspecification/
     targetRevision: main
-  syncPolicy: {}
